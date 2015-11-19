@@ -503,8 +503,8 @@ module SimpleForm
         find_mapping(input_type).new(self, attribute_name, column, input_type, options)
       end
 
-      input.options[:hint] = object.hint( input.column) if options[:hint].nil? rescue ''
-      input.options[:label] = object.form_label( input.column, options[:label]) rescue ''
+      #input.options[:hint] = object.hint( input.column) if options[:hint].nil? rescue ''
+      #input.options[:label] = object.form_label( input.column, options[:label]) rescue ''
 
       input
     end
