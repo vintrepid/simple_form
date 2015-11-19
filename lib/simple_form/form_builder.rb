@@ -497,7 +497,7 @@ module SimpleForm
       column     = find_attribute_column(attribute_name)
       input_type = default_input_type(attribute_name, column, options)
 
-      if block_given?
+      input = if block_given?
         SimpleForm::Inputs::BlockInput.new(self, attribute_name, column, input_type, options, &block)
       else
         find_mapping(input_type).new(self, attribute_name, column, input_type, options)
